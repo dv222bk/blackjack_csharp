@@ -70,6 +70,7 @@
     <Compile Include="controller\PlayGame.cs" />
     <Compile Include="model\Card.cs" />
     <Compile Include="model\Dealer.cs" />
+    <Compile Include="model\GameObserver.cs" />
     <Compile Include="model\Deck.cs" />
     <Compile Include="model\Game.cs" />
     <Compile Include="model\Player.cs" />
