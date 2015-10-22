@@ -81,7 +81,7 @@ namespace BlackJack.model
         {
             Card c = m_deck.GetCard();
             c.Show(show);
-            DealCard(c);
+            a_player.DealCard(c);
         }
     }
 }
