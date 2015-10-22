@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="4367e02e-3403-4d35-8f93-91c5a27a49f6"
   name="view" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -36,6 +36,13 @@
               LastKnownName="IView"
               LastKnownLocation="Package_0950.uml" />
           </interfaceRealization>
+          <dependency
+            Id="4c7421c6-53f0-4c27-a11e-811880016da3">
+            <enumerationMoniker
+              Id="8e35fea0-11e5-49c8-ba04-541ba0f3f025"
+              LastKnownName="Event"
+              LastKnownLocation="Package_0950.uml" />
+          </dependency>
         </suppliersInternal>
       </class>
     </packageHasNamedElement>
@@ -54,8 +61,40 @@
               LastKnownName="IView"
               LastKnownLocation="Package_0950.uml" />
           </interfaceRealization>
+          <dependency
+            Id="e7e3528c-0693-4292-8df5-527d70a78329">
+            <enumerationMoniker
+              Id="8e35fea0-11e5-49c8-ba04-541ba0f3f025"
+              LastKnownName="Event"
+              LastKnownLocation="Package_0950.uml" />
+          </dependency>
         </suppliersInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="8e35fea0-11e5-49c8-ba04-541ba0f3f025"
+        name="Event"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="8dafede0-94fe-49bb-af97-e255e80ce3ac"
+            name="None" />
+          <enumerationLiteral
+            Id="72387b66-292e-460e-a06e-d7e99122653d"
+            name="Hit" />
+          <enumerationLiteral
+            Id="73119b29-5505-4f1e-bb7a-98e64e90457c"
+            name="Stand" />
+          <enumerationLiteral
+            Id="64603c0d-6892-4d74-8a7e-7fe3f4056264"
+            name="Quit" />
+          <enumerationLiteral
+            Id="5f69c773-8c0e-4d48-ba23-8415a61507f9"
+            name="Start" />
+        </ownedLiterals>
+      </enumeration>
     </packageHasNamedElement>
   </packagedElements>
 </package>

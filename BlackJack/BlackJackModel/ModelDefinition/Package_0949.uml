@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="acdc0035-52b7-4186-ad24-770800e81d11"
   name="controller" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -12,21 +12,132 @@
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
+          <interfaceRealization
+            Id="bbd9641f-fa2a-4eb3-8d77-3b017e60812f">
+            <interfaceMoniker
+              Id="5be07571-4a64-4570-9120-bd5817770f73"
+              LastKnownName="GameObserver"
+              LastKnownLocation="Package1_0950.uml" />
+          </interfaceRealization>
           <dependency
-            Id="9005e116-bc4e-4496-9ac1-df5cee2ef38e">
+            Id="647958e6-803a-48f5-b2d1-9d22d4582cdd">
+            <enumerationMoniker
+              Id="8e35fea0-11e5-49c8-ba04-541ba0f3f025"
+              LastKnownName="Event"
+              LastKnownLocation="Package_0950.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="4f37c7cf-1df8-4d51-ab5a-557c95ddf1fd"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="m_view"
+            isLeaf="false"
+            isAbstract="false">
             <interfaceMoniker
               Id="daa2b7a8-1024-4de0-8428-0008d3ffa08b"
               LastKnownName="IView"
               LastKnownLocation="Package_0950.uml" />
-          </dependency>
-          <dependency
-            Id="8e38dffa-b253-4815-baeb-df514e32673b">
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2806619a-0dc0-47d5-b4f9-868f0bef223c"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6dd63a0d-27b9-4d4e-a5d3-79651d968a61"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="65fc51f3-2751-496b-b2d4-9b0a4b1ab84a"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5fda4836-2798-49fb-989f-c9e5ae53a758"
+                  name="m_view"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4df99637-01d9-469c-bd63-64f82202293e"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5cd7cafa-6096-4330-8fb4-52fa1bb82cff"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6a01562f-4eb7-431e-9151-dd130250752b"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="m_game"
+            isLeaf="false"
+            isAbstract="false">
             <classMoniker
               Id="08739ce8-677c-41a8-b0cf-e6796231e3a0"
               LastKnownName="Game"
               LastKnownLocation="Package1_0950.uml" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cef0dc34-8362-4408-8316-2f879bdffafd"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="aab0698d-262c-4708-9562-ed989591faaf"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7661aa11-2b21-4cbc-ae8d-93c4ef1b786b"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fc31a08d-dc7a-4f0c-b858-4c062338f1fe"
+                  name="m_game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </class>
     </packageHasNamedElement>
   </packagedElements>

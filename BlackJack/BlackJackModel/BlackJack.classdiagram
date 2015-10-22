@@ -9,15 +9,79 @@
             <class Id="7af52f34-9c51-4f2c-93c2-a73c7e8b9504" name="PlayGame" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="a6917e36-d961-4204-9aba-91bb2eff919b" />
               <suppliersInternal>
-                <dependency Id="2492bfc4-8016-4f5d-b9d9-7c1eaf44f658">
-                  <interfaceMoniker Id="49023794-8173-4e5f-9096-ef51806baeea" LastKnownName="IView" />
-                  <elementDefinition Id="9005e116-bc4e-4496-9ac1-df5cee2ef38e" />
+                <dependency Id="eb6d4026-51b4-402e-9da5-6c386432a2d4">
+                  <enumerationMoniker Id="ba346f00-8ad1-439d-a992-3cd6674d5138" LastKnownName="Event" />
+                  <elementDefinition Id="647958e6-803a-48f5-b2d1-9d22d4582cdd" />
                 </dependency>
-                <dependency Id="36d6d5f6-9dfa-4c6b-abb1-daa5fffc7820">
-                  <classMoniker Id="7a87146f-5a18-4aac-acf0-1737540224bb" LastKnownName="Game" />
-                  <elementDefinition Id="8e38dffa-b253-4815-baeb-df514e32673b" />
-                </dependency>
+                <interfaceRealization Id="4bb86ad7-c9ae-49b8-83db-c5e9906f6bff">
+                  <interfaceMoniker Id="ae4a6084-fa5d-48f5-add1-1e3dc4977cac" LastKnownName="GameObserver" />
+                  <elementDefinition Id="bbd9641f-fa2a-4eb3-8d77-3b017e60812f" />
+                </interfaceRealization>
               </suppliersInternal>
+              <targetEnds>
+                <association Id="cbe170f1-8772-44b7-a051-6824ae18343a" isDerived="false" sourceEndRoleName="" targetEndRoleName="m_view" isLeaf="false" isAbstract="false">
+                  <interfaceMoniker Id="49023794-8173-4e5f-9096-ef51806baeea" LastKnownName="IView" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1fc2880b-66c2-4468-ba0f-a9b5cb4b2935" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="56987804-14ff-4a38-ad7e-2e3a56b8e2b3" name="Lower">
+                            <elementDefinition Id="6dd63a0d-27b9-4d4e-a5d3-79651d968a61" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="15c7ab9f-19e0-4b0c-a347-ceba3c6b1a91" name="Upper">
+                            <elementDefinition Id="65fc51f3-2751-496b-b2d4-9b0a4b1ab84a" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="2806619a-0dc0-47d5-b4f9-868f0bef223c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b7e05712-31b1-49ae-baeb-a39c18013185" name="m_view" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="40d4296e-e20a-4109-a0c4-3115e312f0b5" name="Lower">
+                            <elementDefinition Id="4df99637-01d9-469c-bd63-64f82202293e" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="98c45a0b-7a26-46ff-a02e-8655490e914b" name="Upper">
+                            <elementDefinition Id="5cd7cafa-6096-4330-8fb4-52fa1bb82cff" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="5fda4836-2798-49fb-989f-c9e5ae53a758" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="4f37c7cf-1df8-4d51-ab5a-557c95ddf1fd" />
+                </association>
+                <association Id="5c7ba77e-1894-4aff-bf7a-44371411a949" isDerived="false" sourceEndRoleName="" targetEndRoleName="m_game" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="7a87146f-5a18-4aac-acf0-1737540224bb" LastKnownName="Game" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="837f2cab-9758-46dd-99d5-2677a4c40362" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="65679d21-a622-40c0-b11c-dbfd48e76f83" name="Lower">
+                            <elementDefinition Id="aab0698d-262c-4708-9562-ed989591faaf" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="520359c2-a1da-4b6a-b613-174f272dea1e" name="Upper">
+                            <elementDefinition Id="7661aa11-2b21-4cbc-ae8d-93c4ef1b786b" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="cef0dc34-8362-4408-8316-2f879bdffafd" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="aee5a481-8f60-4ab8-8076-3bfc1c7abbe2" name="m_game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="fc31a08d-dc7a-4f0c-b858-4c062338f1fe" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6a01562f-4eb7-431e-9151-dd130250752b" />
+                </association>
+              </targetEnds>
             </class>
           </packageHasNamedElement>
         </packagedElements>
@@ -46,6 +110,10 @@
                   <interfaceMoniker Id="49023794-8173-4e5f-9096-ef51806baeea" LastKnownName="IView" />
                   <elementDefinition Id="ff7d3f8d-a246-4bb1-8c24-a998959af77a" />
                 </interfaceRealization>
+                <dependency Id="eeaf892e-b9d5-4066-90b8-ab4d2339b646">
+                  <enumerationMoniker Id="ba346f00-8ad1-439d-a992-3cd6674d5138" LastKnownName="Event" />
+                  <elementDefinition Id="4c7421c6-53f0-4c27-a11e-811880016da3" />
+                </dependency>
               </suppliersInternal>
             </class>
           </packageHasNamedElement>
@@ -57,8 +125,34 @@
                   <interfaceMoniker Id="49023794-8173-4e5f-9096-ef51806baeea" LastKnownName="IView" />
                   <elementDefinition Id="1df8f863-00dd-4dd2-b01c-2e5b09eed6f1" />
                 </interfaceRealization>
+                <dependency Id="df0007f6-1002-45e0-8bce-6c9c9e58d7d4">
+                  <enumerationMoniker Id="ba346f00-8ad1-439d-a992-3cd6674d5138" LastKnownName="Event" />
+                  <elementDefinition Id="e7e3528c-0693-4292-8df5-527d70a78329" />
+                </dependency>
               </suppliersInternal>
             </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="ba346f00-8ad1-439d-a992-3cd6674d5138" name="Event" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="8e35fea0-11e5-49c8-ba04-541ba0f3f025" />
+              <ownedLiterals>
+                <enumerationLiteral Id="a6dd0ef4-fba2-4dae-bbc3-7542c60947de" name="None">
+                  <elementDefinition Id="8dafede0-94fe-49bb-af97-e255e80ce3ac" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="507aee96-c9ab-423d-84ac-33f020c1e3f2" name="Hit">
+                  <elementDefinition Id="72387b66-292e-460e-a06e-d7e99122653d" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="7a3c1114-cc5a-4df7-832c-89b6583ac1c5" name="Stand">
+                  <elementDefinition Id="73119b29-5505-4f1e-bb7a-98e64e90457c" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="ab70c801-7c7a-46f0-ac6d-49712636ea8e" name="Quit">
+                  <elementDefinition Id="64603c0d-6892-4d74-8a7e-7fe3f4056264" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="1411fcca-d680-42ac-b491-6c02e24190cd" name="Start">
+                  <elementDefinition Id="5f69c773-8c0e-4d48-ba23-8415a61507f9" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
           </packageHasNamedElement>
         </packagedElements>
       </package>
@@ -130,6 +224,56 @@
                         <classMoniker Id="66dbb5c1-8fee-4479-bae9-38c874f43ffe" LastKnownName="BasicHitStrategy" />
                         <elementDefinition Id="b84f68a1-bf94-4f25-968c-950ccefeeca8" />
                       </dependency>
+                      <dependency Id="620cbd12-610c-4ff5-99aa-3e554c8b5986">
+                        <classMoniker Id="dc9b8e3c-a614-4b4f-a957-f07692df2f01" LastKnownName="DealerWinOnTieStrategy" />
+                        <elementDefinition Id="d0e36373-0615-4dc8-97fd-10eb4e8789fc" />
+                      </dependency>
+                      <dependency Id="3648117f-6a54-42fa-9c75-27c57ff24a01">
+                        <classMoniker Id="86d4f396-abc1-4e62-84be-ee7a86128f54" LastKnownName="PlayerWinOnTieStrategy" />
+                        <elementDefinition Id="322cd28a-c5d1-4351-9250-31782493bca7" />
+                      </dependency>
+                      <dependency Id="95307399-1c69-460d-8ef0-c46b36c91a37">
+                        <classMoniker Id="e27d3a30-074f-4cec-88d6-f1baf50ff77e" LastKnownName="Soft17HitStrategy" />
+                        <elementDefinition Id="c6db15d2-ca8e-4c80-8a5a-4315b7ed7a2a" />
+                      </dependency>
+                    </suppliersInternal>
+                  </class>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <Interface Id="20adc3d2-b06b-4b61-a41e-aabed66f7a15" name="IWinStrategy" isAbstract="false" isLeaf="false">
+                    <elementDefinition Id="2038ae78-d31b-48b0-a483-04bbf03ec10e" />
+                  </Interface>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <class Id="dc9b8e3c-a614-4b4f-a957-f07692df2f01" name="DealerWinOnTieStrategy" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="51d622e6-971f-4bf3-a76a-c9c39cb6b096" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="4b3c180f-83fd-4d9d-902f-f5b234c3aede">
+                        <interfaceMoniker Id="20adc3d2-b06b-4b61-a41e-aabed66f7a15" LastKnownName="IWinStrategy" />
+                        <elementDefinition Id="27ed87a5-2e36-4807-9ee5-4fb9b1acc2cc" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                  </class>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <class Id="86d4f396-abc1-4e62-84be-ee7a86128f54" name="PlayerWinOnTieStrategy" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="f4f3e115-99f2-46c3-af0c-171536a8ce37" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="3b188db3-c68a-4f2a-a38d-3b9ad02a0b90">
+                        <interfaceMoniker Id="20adc3d2-b06b-4b61-a41e-aabed66f7a15" LastKnownName="IWinStrategy" />
+                        <elementDefinition Id="2a765919-77bd-4f89-8618-455c8085973c" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                  </class>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <class Id="e27d3a30-074f-4cec-88d6-f1baf50ff77e" name="Soft17HitStrategy" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="2bfaefa3-8dc2-4215-859d-fca5674a9916" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="13f640dd-825f-4100-a5a0-91b23efa0404">
+                        <interfaceMoniker Id="22acfdec-0761-4843-b8bc-fed534391061" LastKnownName="IHitStrategy" />
+                        <elementDefinition Id="00b84452-2f61-4609-93ee-cf38ee882f12" />
+                      </interfaceRealization>
                     </suppliersInternal>
                   </class>
                 </packageHasNamedElement>
@@ -265,6 +409,68 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="e57045bc-7b13-49b4-8760-d3f0a1a89346" />
                 </association>
+                <association Id="d8da6231-1dc5-48b7-9b4f-d6e0b3d2b657" isDerived="false" sourceEndRoleName="" targetEndRoleName="m_observer" isLeaf="false" isAbstract="false">
+                  <interfaceMoniker Id="ae4a6084-fa5d-48f5-add1-1e3dc4977cac" LastKnownName="GameObserver" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7e60f328-2c6d-44ed-b5a0-fa9c5ba2d0aa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="9e548bd5-5006-42b3-80bb-1329425ded46" name="Lower">
+                            <elementDefinition Id="c44c49ca-ac8a-401e-9930-17fa3257d2ff" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="c350ed56-f944-40ea-9c1d-1f18d3f5554e" name="Upper">
+                            <elementDefinition Id="d3e89458-8c22-42ba-8d79-7ff4d49f05c5" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="cd3823dd-ce88-4eec-9cfd-65d015c64c84" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="52fef8ed-8b36-41a2-ba6e-29219bd8c609" name="m_observer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="05a22f16-bddb-44df-95c1-e34b30b394e5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="fc3d43bd-77d3-42d9-9fdd-3637661045c6" />
+                </association>
+                <association Id="f81c8e6b-15bb-4143-9a51-a406436141e7" isDerived="false" sourceEndRoleName=" " targetEndRoleName="m_winRule" isLeaf="false" isAbstract="false">
+                  <interfaceMoniker Id="20adc3d2-b06b-4b61-a41e-aabed66f7a15" LastKnownName="IWinStrategy" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="0c021c06-2180-4158-a3f5-46221d7d26a9" name=" " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="8ef2dca7-e1f0-4122-be8a-82ed69f79009" name="Lower">
+                            <elementDefinition Id="0c24ae06-4e0b-49c2-99da-6eb59a0770ff" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="e205c219-30b4-4284-82e0-668f6a57882c" name="Upper">
+                            <elementDefinition Id="fc49bbf5-21d9-44d7-b308-aa2ed5074db0" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="e211899f-8642-4a6c-8de4-12f25b3d0f1c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="d3b42c1d-d98c-4af1-a7ba-f3f8d4962d53" name="m_winRule" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="58027467-9294-4702-8d9d-697630577bdc" name="Lower">
+                            <elementDefinition Id="5496a1c1-ff55-4254-b595-4a2c086c4e60" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="9ac23e65-9662-4bdf-82da-172ef44004e4" name="Upper">
+                            <elementDefinition Id="275c6710-1387-4a18-baa7-fddef3fb7539" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="1185d390-950a-48a4-9d1d-64c7e085c505" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="468bc6d9-5a0f-4d25-ada3-e628173be1f6" />
+                </association>
               </targetEnds>
             </class>
           </packageHasNamedElement>
@@ -357,6 +563,12 @@
           <packageHasNamedElement>
             <class Id="7a87146f-5a18-4aac-acf0-1737540224bb" name="Game" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="08739ce8-677c-41a8-b0cf-e6796231e3a0" />
+              <suppliersInternal>
+                <dependency Id="72be404d-82e8-4477-a7c2-64be9a56e333">
+                  <interfaceMoniker Id="ae4a6084-fa5d-48f5-add1-1e3dc4977cac" LastKnownName="GameObserver" />
+                  <elementDefinition Id="8d62726c-833a-4f68-a957-ccd7e497cc07" />
+                </dependency>
+              </suppliersInternal>
               <targetEnds>
                 <association Id="9b2ee47a-7e95-4105-8047-a7a25b616f03" isDerived="false" sourceEndRoleName="" targetEndRoleName="m_player" isLeaf="false" isAbstract="false">
                   <classMoniker Id="5008487d-acb2-4d99-b615-b610fd487a16" LastKnownName="Player" />
@@ -432,6 +644,11 @@
                 </association>
               </targetEnds>
             </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="ae4a6084-fa5d-48f5-add1-1e3dc4977cac" name="GameObserver" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="5be07571-4a64-4570-9120-bd5817770f73" />
+            </Interface>
           </packageHasNamedElement>
         </packagedElements>
       </package>

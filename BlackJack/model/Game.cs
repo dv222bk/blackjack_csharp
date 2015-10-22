@@ -9,7 +9,6 @@ namespace BlackJack.model
     {
         private model.Dealer m_dealer;
         private model.Player m_player;
-        private GameObserver m_observer;
 
         public Game()
         {
@@ -64,7 +63,6 @@ namespace BlackJack.model
 
         public void AddObserver(GameObserver a_observer)
         {
-            m_observer = a_observer;
             m_dealer.AddObserver(a_observer);
         }
     }
