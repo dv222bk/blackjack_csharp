@@ -14,8 +14,6 @@ namespace BlackJack.model
         private rules.IHitStrategy m_hitRule;
         private rules.IWinStrategy m_winRule;
 
-        private GameObserver m_observer;
-
         public Dealer(rules.RulesFactory a_rulesFactory)
         {
             m_newGameRule = a_rulesFactory.GetNewGameRule();
@@ -30,7 +28,7 @@ namespace BlackJack.model
                 m_deck = new Deck();
                 ClearHand();
                 a_player.ClearHand();
-                return m_newGameRule.NewGame(m_deck, this, a_player);   
+                return m_newGameRule.NewGame(this, a_player);   
             }
             return false;
         }
@@ -65,10 +63,7 @@ namespace BlackJack.model
             if (m_deck != null)
             {
                 ShowHand();
-                foreach(Card c in this.GetHand()) {
-                    c.Show(true);
-                    m_observer.NewCardInHand();
-                }
+                UpdateObservers();
 
                 while (m_hitRule.DoHit(this))
                 {
@@ -84,12 +79,15 @@ namespace BlackJack.model
             Card c = m_deck.GetCard();
             c.Show(show);
             a_player.DealCard(c);
-            m_observer.NewCardInHand();
+            UpdateObservers();
         }
 
-        public void AddObserver(GameObserver a_observer)
+        public void UpdateObservers()
         {
-            m_observer = a_observer;
+            foreach (GameObserver m_observer in GetObservers())
+            {
+                m_observer.Update();
+            }
         }
     }
 }

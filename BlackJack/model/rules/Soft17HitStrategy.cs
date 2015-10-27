@@ -11,33 +11,31 @@ namespace BlackJack.model.rules
 
         public bool DoHit(model.Player a_dealer)
         {
-            if (a_dealer.CalcScore() < g_hitLimit)
+            if (a_dealer.CalcScore() == g_hitLimit)
             {
-                return true;
-            }
-            else if (a_dealer.CalcScore() == g_hitLimit)
-            {
-                int totalValue = 0;
+                int otherValue = 0;
                 bool aceFound = false;
+                int[] cardScores = new int[(int)model.Card.Value.Count] { 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11 };
+
                 foreach (Card card in a_dealer.GetHand())
                 {
-                    if (card.GetValue() == Card.Value.Ace)
+                    if (card.GetValue() == Card.Value.Ace && !aceFound)
                     {
                         aceFound = true;
                     } else {
-                        totalValue += (int)card.GetValue();
-                        if (totalValue > 6)
+                        otherValue += cardScores[(int)card.GetValue()];
+                        if (otherValue > 6)
                         {
                             return false;
                         }
                     }
                 }
-                if (totalValue == 6 && aceFound)
+                if (otherValue == 6 && aceFound)
                 {
                     return true;
                 }
             }
-            return false;
+            return a_dealer.CalcScore() < g_hitLimit;
         }
     }
 }

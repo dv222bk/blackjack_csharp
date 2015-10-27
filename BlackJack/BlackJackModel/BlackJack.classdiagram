@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="ce6ab5ad-19fd-4084-80ad-80094c6e032b" name="BlackJack" linkedPackageId="c879b0ba-216b-4f86-a1b3-4869d9637133" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ce6ab5ad-19fd-4084-80ad-80094c6e032b" name="BlackJack" linkedPackageId="c879b0ba-216b-4f86-a1b3-4869d9637133" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="67210203-217c-4952-b91e-e329c1623f52" name="controller">
@@ -158,7 +158,7 @@
       </package>
     </logicalClassDesignerModelHasPackages>
     <logicalClassDesignerModelHasPackages>
-      <package Id="9077bdab-3f4b-4f1e-aba6-47574978a912" name="model">
+      <package Id="9077bdab-3f4b-4f1e-aba6-47574978a912" name="s">
         <elementDefinition Id="611d0dda-1055-4b6d-bca5-9dad81e292a9" />
         <packagedElements>
           <packageHasNamedElement>
@@ -274,6 +274,10 @@
                         <interfaceMoniker Id="22acfdec-0761-4843-b8bc-fed534391061" LastKnownName="IHitStrategy" />
                         <elementDefinition Id="00b84452-2f61-4609-93ee-cf38ee882f12" />
                       </interfaceRealization>
+                      <dependency Id="74be6140-7185-49b9-b2cc-3cd92f18b328">
+                        <classMoniker Id="04673482-5b9b-481b-8cfb-351cb3a35bff" LastKnownName="Card" />
+                        <elementDefinition Id="d532983d-3a19-4042-b3ca-c179dc3b02ff" />
+                      </dependency>
                     </suppliersInternal>
                   </class>
                 </packageHasNamedElement>
@@ -292,6 +296,10 @@
                 <dependency Id="0bd82a5c-7bde-4627-8e84-939b4bbfd003">
                   <classMoniker Id="490c330f-5378-4e7f-8a78-6db4fefcbc44" LastKnownName="RulesFactory" />
                   <elementDefinition Id="ebcbd2dc-bbcb-4c6a-9cba-c8de4f9118c9" />
+                </dependency>
+                <dependency Id="f24f7ccb-ec8a-4059-8224-3720a1677c06">
+                  <classMoniker Id="04673482-5b9b-481b-8cfb-351cb3a35bff" LastKnownName="Card" />
+                  <elementDefinition Id="19244832-e563-4fa6-91b4-c7dae4fe6888" />
                 </dependency>
               </suppliersInternal>
               <generalsInternal>

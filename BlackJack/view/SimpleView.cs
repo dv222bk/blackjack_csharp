@@ -76,5 +76,9 @@ namespace BlackJack.view
             }
             
         }
+
+        public void PauseGame() {
+            System.Threading.Thread.Sleep(500);
+        }
     }
 }

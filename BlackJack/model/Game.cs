@@ -63,6 +63,7 @@ namespace BlackJack.model
 
         public void AddObserver(GameObserver a_observer)
         {
+            m_player.AddObserver(a_observer);
             m_dealer.AddObserver(a_observer);
         }
     }

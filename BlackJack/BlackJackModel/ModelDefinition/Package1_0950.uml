@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="611d0dda-1055-4b6d-bca5-9dad81e292a9"
-  name="model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  name="s" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <packagedElements>
     <packageHasNamedElement>
       <packageMoniker
@@ -32,6 +32,13 @@
               Id="274aad89-4b81-46c6-a61d-54ff6d7a1d51"
               LastKnownName="RulesFactory"
               LastKnownLocation="Package2_0950.uml" />
+          </dependency>
+          <dependency
+            Id="19244832-e563-4fa6-91b4-c7dae4fe6888">
+            <classMoniker
+              Id="a6713820-b5ef-4e7b-9982-6130438f8429"
+              LastKnownName="Card"
+              LastKnownLocation="Package1_0950.uml" />
           </dependency>
         </suppliersInternal>
         <generalsInternal>

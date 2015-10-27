@@ -51,9 +51,9 @@ namespace BlackJack.controller
             return true;
         }
 
-        public void NewCardInHand()
+        public void Update()
         {
-            System.Threading.Thread.Sleep(500);
+            m_view.PauseGame();
             m_view.DisplayWelcomeMessage();
             m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
             m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
